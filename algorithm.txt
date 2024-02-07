@@ -1,1 +1,14 @@
-
+1) Explain code to user
+1.5) Set intial balance to $212.90
+2) Ask user for name and greet the user
+3) Provide user with list of options
+    a) Deposit, Withdraw, Balance, and Exit
+4) If user chooses deposit, ask them how much they want to deposit.
+    A) Add that inputted number to balance.
+5) If the user selects withdraw, ask them how much to withdraw.
+    A)Subtract inputted number from balance.
+    B) If number brings balance into negative, output an error message.
+6) If user selects balance, output the current balance.
+7) Otherwise the user selects leave, ask user if they want receipt printed or emailed.
+    A)Display total amount deposited / withdrawn and thank the user.
+    B) Exit code
