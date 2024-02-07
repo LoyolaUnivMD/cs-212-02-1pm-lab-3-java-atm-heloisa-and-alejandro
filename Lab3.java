@@ -31,27 +31,39 @@ class Lab3 {
                 Balance += deposit_amt;
                 System.out.println(Balance);
 
-
             }
             else if(user_choice.equals("W")) {
                 System.out.println("How much would you like to withdraw: ");
                 Double withdraw_amt = input.nextDouble();
-                while (withdraw_amt > Balance){
-                    System.out.println("Error! Insufficent Funds!");
-                    System.out.println("Please enter a valid amount: ");
-                    withdraw_amt = input.nextDouble();
+                //Just cant be negative
+                //while (withdraw_amt > Balance){
+                    //System.out.println("Error! Insufficent Funds!");
+                    //System.out.println("Please enter a valid amount: ");
+                    //withdraw_amt = input.nextDouble();
 
-                }
-                if (withdraw_amt <= Balance){
-                    Balance -= withdraw_amt;
-                    System.out.println(Balance);
-                }
+                //}
+                //if (withdraw_amt <= Balance){
+                   // Balance -= withdraw_amt;
+                    //System.out.println(Balance);
+                //}
 
             }
+            else if (user_choice.equals("B")){
+                System.out.println("Here is your current Balance: ");
+                System.out.println(Balance);
+            }
+
             System.out.println("What would you like to do now?");
             System.out.println("D eposit" + "\n" + "W ithdraw" + "\n" +
                     "B alance" + "\n" + "E xit");
             user_choice = input.nextLine();
         }
+        if(user_choice.equals("E")){
+            System.out.println("Thanks for using the ATM!");
+            System.out.println("How would you like your receipt: (printed or emailed) ");
+
+
+        }
+
     }
 }
