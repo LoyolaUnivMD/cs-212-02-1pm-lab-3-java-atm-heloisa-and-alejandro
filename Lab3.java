@@ -15,14 +15,14 @@ import java.util.Scanner;
 class Lab3 {
 
     static double Balance = 212.90;
-
+// sets balance as a static value to keep it consistent and able to be updated
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         NumberFormat formatter = new DecimalFormat("$#0.00");
-
+//sets number format to provide acurate decimal numbers to user (balance can have decimals)
         System.out.println("Welcome to the ATM, what is your name?");
         String name = input.nextLine();
-
+// inputs users name
         System.out.println("It is nice to meet you " + name + " what would you like to do today:");
         System.out.println("D eposit" + "\n" + "W ithdraw" + "\n" + "B alance" + "\n" + "E xit");
         String user_choice = input.nextLine();
@@ -33,8 +33,8 @@ class Lab3 {
                 System.out.println("How much would you like to deposit: ");
                 double deposit_amt = input.nextDouble();
                 input.nextLine();
-                Balance += deposit_amt;
-                System.out.println("Your new balance is: " + formatter.format(Balance));
+                Balance += deposit_amt; // will keep orihginal balance amount and just add user input
+                System.out.println("Your new balance is: " + formatter.format(Balance)); //balance will be formatted with decimals
 //will add whatever deposited value to Balance
             }
 
